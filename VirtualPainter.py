@@ -2,6 +2,8 @@ import os
 import cv2
 import time
 import numpy as np
+import pandas as pd
+import matplotlib as plt
 import HandTrackingModule as htm
 
 brushThickness = 15
