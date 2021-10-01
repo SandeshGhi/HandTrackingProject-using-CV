@@ -78,6 +78,24 @@ class handDetector():
             else:
                 fingers.append(0)
         return fingers
+    
+    #rotating fingers
+    def fingersRotate(self):
+        fingers = []
+
+        # clockwise rotate
+        if self.lmList[self.tipIds[0]][1] < self.lmList[self.tipIds[0] - 1][1]:
+            fingers.append(1)
+        else:
+            fingers.append(0)
+
+        # anti-clockwise rotate
+        for id in range(1, 5):
+            if self.lmList[self.tipIds[id]][2] < self.lmList[self.tipIds[id] - 2][2]:
+                fingers.append(1)
+            else:
+                fingers.append(0)
+        return fingers
 
 
 def main():
